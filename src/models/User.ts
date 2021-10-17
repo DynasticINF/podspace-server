@@ -75,7 +75,28 @@ const userSchema: Schema<UserDocument> = new Schema<UserDocument>(
      * - Delete this comment and the example field.
      * - Add comment(s) to explain your work.
      */
-    exampleField: { required: false, type: String, unique: false },
+    // exampleField: { required: false, type: String, unique: false },
+
+    // Construct the User Schema
+
+    emailAddress: { required: false, type: String, unique: true },
+
+    firstName: { require: false, type: String, unique: false },
+
+    lastName: { require: false, type: String, unique: false },
+
+    instagramUrl: { require: false, type: String, unique: false },
+    
+    linkedInUrl: { require: false, type: String, unique: false },
+
+    twitterUrl: { require: false, type: String, unique: false},
+
+    phoneNumber: { require: true, type: String, unique: true },
+
+    profilePictureKey: { require: false, type: String, unique: true },
+
+    profilePictureUrl: { require: false, type: String, unique: true },
+
 
     // We shouldn't be returning the refreshToken when fetching a user from
     // the database, since that is sensitive information.
